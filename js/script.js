@@ -37,7 +37,7 @@ document.getElementById('formsub').onsubmit = (e) => {
     let formdata = document.getElementById('formsub');
     let data = new FormData(formdata)
     const toast = new bootstrap.Toast(toastLiveExample);
-    if (formdata[0].value) {
+    if (formdata[0].value&&formdata[1].value&&formdata[2].value&&formdata[3].value) {
         document.getElementById('status_bg').classList.remove('change', 'valid')
         document.getElementById('status').innerText = "Pending"
         document.getElementById('innertext').innerText = "Sending, Please wait"
