@@ -48,6 +48,8 @@
                 </div>
             </div>
         </nav>
+        <div class="position-fixed arrow bottom-0 end-0 p-3"> <a href="#home"><i class="fa-solid fa-xl fa-up-long"></i></a>
+        </div>
     </header>
     <!-- banner home-->
     <section id="home" class="banner_wrapper">
@@ -230,7 +232,8 @@
                         <div class="row btn_space justify-content-around">
                             <button class="col-3 btn_proj"><a href="https://todo-app-jaychandlani.netlify.app/"><i
                                         class="fa-solid fa-2xl fa-eye"></i></a></button>
-                            <button class=" col-3 btn_proj"><a target="_blank" href="https://github.com/JayChandlani/todo-app"><i
+                            <button class=" col-3 btn_proj"><a target="_blank"
+                                    href="https://github.com/JayChandlani/todo-app"><i
                                         class="fa-brands fa-2xl fa-github"></a></i></button>
                         </div>
                     </div>
@@ -328,7 +331,7 @@
     <!-- contact banner -->
     <section id="contact" class="contact_wrapper">
         <div class="container">
-            <div class="row justify-content-between align-items-center">
+            <div class="row  justify-content-between align-items-center">
                 <div class="col-lg-6 order-2 order-lg-1 pe-lg-5 text-lg-start text-center">
                     <span class="subtitle">Take A Coffee And Chat With Me</span>
                     <div class="row call_detailes mb-4">
@@ -343,21 +346,34 @@
                                     href="https://github.com/JayChandlani" class="fw-bold link"> GitHub</a></button>
                         </div>
                     </div>
-                    <form class="form_container" action="">
+                    <form class="form_container" id="formsub" method="post">
                         <div class="mb-4">
-                            <input class="form-control" type="text" placeholder="Your Name...">
+                            <input class="form-control" type="text" name="name" placeholder="Your Name...">
                         </div>
                         <div class="mb-4">
-                            <input class="form-control" type="text" placeholder="Your Phone...">
+                            <input class="form-control" type="text" name="number" placeholder="Your Phone...">
                         </div>
                         <div class="mb-4">
-                            <input class="form-control" type="text" placeholder="Your Email...">
+                            <input class="form-control" type="text" name="email" placeholder="Your Email...">
                         </div>
                         <div class="mb-4">
-                            <textarea class="form-control" cols="40" id="exampleFormControlTextarea1" rows="4"
-                                placeholder="Write your message.."></textarea>
+                            <textarea class="form-control" name="message" cols="40" id="exampleFormControlTextarea1"
+                                rows="4" placeholder="Write your message.."></textarea>
                         </div>
-                        <button type="submit" class="main-btn">Submit</button>
+                        <button type="submit" id="liveToastBtn" class="main-btn">Submit</button>
+
+                        <div class="toast-container  position-fixed bottom-0 start-50 translate-middle-x p-3">
+                            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="toast-header status_bg" id="status_bg">
+                                    <strong class="me-auto " id="status">Processing</strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="toast-body body_bg" id="innertext">
+                                    Hello, world! This is a toast message.
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="col-lg-6 order-1 mb-4 text-center order-lg-1 mb-lg-0">
@@ -371,21 +387,22 @@
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6 col-mb-8 ">
-                    <h1 class= " p-2 subtitle ">Made with <i class="fa-sharp fa-solid fa-heart"></i> by Jay Chandlani</h1>
+                    <h1 class=" p-2 subtitle ">Made with <i class="fa-sharp fa-solid fa-heart"></i> by Jay Chandlani
+                    </h1>
                 </div>
                 <div class="justify-content-around footer_icon col-lg-6 col-mb-12">
-                    <a href=""><i class="fa-brands me-2 fa-lg fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands me-2 fa-lg fa-twitter"></i></a>
-                    <a href=""><i class="fa-brands me-2 fa-lg fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands me-2 fa-lg fa-linkedin"></i></i></a>
+                    <a href="#"><i class="fa-brands me-2 fa-lg fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands me-2 fa-lg fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands me-2 fa-lg fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands me-2 fa-lg fa-linkedin"></i></i></a>
                 </div>
             </div>
-       
+
         </div>
- 
-       
+
+
     </section>
-   
+
     <script src="https://kit.fontawesome.com/51fc6cc36b.js" crossorigin="anonymous"></script>
     <!-- bootstrap cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
